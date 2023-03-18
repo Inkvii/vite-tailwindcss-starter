@@ -5,5 +5,10 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+    require("@tailwindcss/forms"),
+    function ({ addVariant }) {
+      addVariant("child", "& > *")
+    },
+  ],
 }
